@@ -1,4 +1,4 @@
-0x00. AirBnB clone - The console
+<b>0x00. AirBnB clone - The console<b>
 
 
 ![image](https://github.com/AnneMbulwa/AirBnB_clone/assets/91100743/8caf3204-f769-433c-9dec-8e09d1551859)
