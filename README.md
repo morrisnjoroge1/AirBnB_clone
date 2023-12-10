@@ -115,3 +115,47 @@ INSTALLING
 first clone the repository:https://github.com/AnneMbulwa/AirBnB_clone.git
 <br>
 
+then cd into the AirBnB_clone repository
+
+that contains several files:
+<br>
+ 		console.py : The main executable of the project, the command interpreter
+		<br>
+		models/engine/file_storage.py: Class that serializes instances to a JSON file and deserializes JSON file to instances
+		<br>
+		models/__ init __.py: A unique FileStorage instance for the application
+		<br>
+		models/base_model.py: Class that defines all common attributes/methods for other classes.
+		<br>
+		models/user.py: User class that inherits from BaseModel
+		<br>
+		models/state.py: State class that inherits from BaseModel
+		<br>
+		models/city.py: City class that inherits from BaseModel
+		<br>
+		models/amenity.py: Amenity class that inherits from BaseModel
+		<br>
+		models/place.py: Place class that inherits from BaseModel
+		<br>
+		models/review.py: Review class that inherits from BaseModel
+		<br>
+
+
+<b>RUN</b>
+
+to execute the console use:
+
+In interactive mode
+
+
+$ ./console.py
+(hbnb) help
+
+Documented commands (type help <topic>):
+========================================
+EOF  help  quit
+
+(hbnb) 
+(hbnb) 
+(hbnb) quit
+$
