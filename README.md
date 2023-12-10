@@ -1,9 +1,9 @@
-<strong>0x00. AirBnB clone - The console<s/trong>
+# 0x00. AirBnB clone - The console
 
 
 ![image](https://github.com/AnneMbulwa/AirBnB_clone/assets/91100743/8caf3204-f769-433c-9dec-8e09d1551859)
 
-PROJECT FINAL DERAVATIVES
+# PROJECT FINAL DERAVATIVES
 
 
 After 4 months, you will have a complete web application composed by:
@@ -19,14 +19,14 @@ An API that provides a communication interface between the front-end and your da
 
 
 
-Description of the project
+# Description of the project
 
 
 This is the first part of the AirBnB clone project where we worked on the backend of the project whiles interfacing it with a console application with the help of the cmd module in python.
 
 Data (python objects) generated are stored in a json file and can be accessed with the help of the json module in python
 
-0x01 Introduction
+# Introduction
 Team project to build a clone of AirBnB.
 
 The console is a command interpreter to manage objects abstraction between objects and how they are stored.
@@ -41,7 +41,7 @@ do operations on objects
 destroy an object
 
 
-Description of the command interpreter
+# Description of the command interpreter
 
 
 The interface of the application is just like the Bash shell except that this has a limited number of accepted commands that were solely defined for the purposes of the usage of the AirBnB website.
@@ -61,55 +61,58 @@ Update attributes of an object
 Destroy an object
 <br>
 
-Available commands
+# Available commands
 <br>
-Command	Explanation
 <br>
-create	Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id. Ex: $ create BaseModel
+|--|--|
+| create | Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id. Ex: $ create BaseModel
 <br>
-show	Prints the string representation of an instance based on the class name and id. Ex: $ show BaseModel 1234-1234-1234
+| show | Prints the string representation of an instance based on the class name and id. Ex: $ show BaseModel 1234-1234-1234
 <br>
-all	Prints all string representation of all instances based or not on the class name. Ex: $ all BaseModel
+| all | Prints all string representation of all instances based or not on the class name. Ex: $ all BaseModel
 <br>
-update	Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holbertonschool.com"
-<br>
-
-Normal command input
+| update | Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holbertonschool.com"
 <br>
 
-
-Command	Example
-<br>
-create	create [class name]
-<br>
-show	show [class name] [id]
-<br>
-all	create [class name] [id]
-<br>
-update	create [class name] [id] [arg_name] [arg_value]
+## Normal command input
 <br>
 
 
-<u>Available classes</U>
+|Command| Example|
 <br>
-BaseModel  id, created_at, updated_at
+|--|--|
+|create| create [class name]
 <br>
-User	email, password, first_name, last_name
+|show| show [class name] [id]
 <br>
-State	name state_id
+|all| create [class name] [id]
 <br>
-City	name
+|update| create [class name] [id] [arg_name] [arg_value]
 <br>
-Amenity	name
+
+
+# Available classes
 <br>
-Place	city_id user_id name description number_rooms number_bathrooms max_guest price_by_night latitude``longitude amenity_ids
+|--|--|
+|BaseModel | ` id`, `created_at`, `updated_at`|
 <br>
-Review	place_id user_id text
+|User|	`email`, `password`, `first_name`, `last_name`|
+<br>
+|State|	`name`, `state_id`|
+<br>
+|City| `name`|
+<br>
+|Amenity| `name`|
+<br>
+|Place | `city_id`, `user_id name`, `description`, `number_rooms`, `number_bathrooms`, `max_guest`, `price_by_night` ,`latitude`,`longitude`, `amenity_ids`|
+<br>
+|Review| `place_id` `user_id` `text`|
 <br>
 
 <b>How To Start It</b>
 <br>
-INSTALLING
+
+# INSTALLING
 
 
 first clone the repository:https://github.com/AnneMbulwa/AirBnB_clone.git
@@ -141,7 +144,7 @@ that contains several files:
 		<br>
 
 
-<strong>RUN</strong>
+# RUN
 
 ```
 $ ./console.py
@@ -163,7 +166,8 @@ $
 <br>
 
 
-In Non-interactive mode, the shell will need to be run with a command input piped into its execution so that the command is run as soon as the Shell starts. In this mode no prompt will appear, and no further input will be expected from the user.
+###In Non-interactive mode, 
+the shell will need to be run with a command input piped into its execution so that the command is run as soon as the Shell starts. In this mode no prompt will appear, and no further input will be expected from the user.
 <br>
 
 
@@ -193,7 +197,7 @@ $
 The program will create a file called: file.json whenever you create a new model, it'll be store in the top folder.
 
 
-TESTING
+# TESTING
 
 all test are defined in the test folder
 <br>
@@ -212,13 +216,13 @@ Execution command: python3 -m unittest discover tests
 or: python3 -m unittest tests/test_models/test_base.py
 <br>
 
-run test in interactive mode
+### run test in interactive mode
 
 ```
 echo "python3 -m unittest discover tests" | bash
 ```
 
-run test in non-interactive mode
+### run test in non-interactive mode
 
 ```
 python3 -m unittest discover tests
