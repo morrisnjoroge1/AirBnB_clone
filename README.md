@@ -62,14 +62,29 @@ Destroy an object
 <br>
 
 Available commands
+<br>
 Command	Explanation
+<br>
 create	Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id. Ex: $ create BaseModel
+<br>
 show	Prints the string representation of an instance based on the class name and id. Ex: $ show BaseModel 1234-1234-1234
+<br>
 all	Prints all string representation of all instances based or not on the class name. Ex: $ all BaseModel
+<br>
 update	Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holbertonschool.com"
+<br>
+
 Normal command input
+<br>
+
+
 Command	Example
+<br>
 create	create [class name]
+<br>
 show	show [class name] [id]
+<br>
 all	create [class name] [id]
+<br>
 update	create [class name] [id] [arg_name] [arg_value]
+<br>
