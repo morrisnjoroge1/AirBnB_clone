@@ -143,6 +143,7 @@ that contains several files:
 
 <strong>RUN</strong>
 
+```
 $ ./console.py
 (hbnb) help
 
@@ -158,6 +159,7 @@ EOF  help  quit
 (hbnb) quit
 
 $
+```
 <br>
 
 
@@ -165,7 +167,8 @@ In Non-interactive mode, the shell will need to be run with a command input pipe
 <br>
 
 
-```$ echo "help" | ./console.py
+```
+$ echo "help" | ./console.py
 (hbnb)
 
 Documented commands (type help <topic>):
