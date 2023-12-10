@@ -106,3 +106,12 @@ Place	city_id user_id name description number_rooms number_bathrooms max_guest p
 <br>
 Review	place_id user_id text
 <br>
+
+<b>How To Start It</b>
+<br>
+INSTALLING
+
+
+first clone the repository:https://github.com/AnneMbulwa/AirBnB_clone.git
+<br>
+
