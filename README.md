@@ -61,58 +61,56 @@ Update attributes of an object
 Destroy an object
 <br>
 
-# Available commands
+## Available commands
 <br>
 <br>
-|--|--|
-| create | Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id. Ex: $ create BaseModel
+
+create : Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id. Ex: $ create BaseModel
 <br>
-| show | Prints the string representation of an instance based on the class name and id. Ex: $ show BaseModel 1234-1234-1234
+show : Prints the string representation of an instance based on the class name and id. Ex: $ show BaseModel 1234-1234-1234
 <br>
-| all | Prints all string representation of all instances based or not on the class name. Ex: $ all BaseModel
+all : Prints all string representation of all instances based or not on the class name. Ex: $ all BaseModel
 <br>
-| update | Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holbertonschool.com"
+update : Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holbertonschool.com"
 <br>
 
 ## Normal command input
 <br>
 
 
-|Command| Example|
+Command Example
 <br>
-|--|--|
-|create| create [class name]
+create: create [class name]
 <br>
-|show| show [class name] [id]
+show: show [class name] [id]
 <br>
-|all| create [class name] [id]
+all: create [class name] [id]
 <br>
-|update| create [class name] [id] [arg_name] [arg_value]
+update: create [class name] [id] [arg_name] [arg_value]
 <br>
 
 
 # Available classes
 <br>
-|--|--|
-|BaseModel | ` id`, `created_at`, `updated_at`|
+BaseModel: ` id`, `created_at`, `updated_at`
 <br>
-|User|	`email`, `password`, `first_name`, `last_name`|
+User:	`email`, `password`, `first_name`, `last_name`
 <br>
-|State|	`name`, `state_id`|
+State:	`name`, `state_id`
 <br>
-|City| `name`|
+City: `name`
 <br>
-|Amenity| `name`|
+Amenity: `name`
 <br>
-|Place | `city_id`, `user_id name`, `description`, `number_rooms`, `number_bathrooms`, `max_guest`, `price_by_night` ,`latitude`,`longitude`, `amenity_ids`|
+Place : `city_id`, `user_id name`, `description`, `number_rooms`, `number_bathrooms`, `max_guest`, `price_by_night` ,`latitude`,`longitude`, `amenity_ids`
 <br>
-|Review| `place_id` `user_id` `text`|
+Review: `place_id` `user_id` `text`
 <br>
 
 <b>How To Start It</b>
 <br>
 
-# INSTALLING
+## INSTALLING
 
 
 first clone the repository:https://github.com/AnneMbulwa/AirBnB_clone.git
@@ -144,7 +142,7 @@ that contains several files:
 		<br>
 
 
-# RUN
+## RUN
 
 ```
 $ ./console.py
@@ -166,7 +164,7 @@ $
 <br>
 
 
-###In Non-interactive mode, 
+## In Non-interactive mode, 
 the shell will need to be run with a command input piped into its execution so that the command is run as soon as the Shell starts. In this mode no prompt will appear, and no further input will be expected from the user.
 <br>
 
