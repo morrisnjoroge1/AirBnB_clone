@@ -57,6 +57,33 @@ class Test_BaseModel(unittest.TestCase):
         self.assertIsNotNone(base_model.updated_at)
         self.assertEqual(base_model.created_at, base_model.updated_at)
 
+    def test_args(self):
+        """args that are used"""
+        bm = BaseModel(None)
+        self.assertNotIn(None, bm.__dict__.values())
+
+    def test_init_with_kwargs(self):
+        """Test initialization with kwargs."""
+        date = datetime.now()
+        tform = date.isoformat()
+        bm = BaseModel(id="123", created_at=tform, updated_at=tform)
+        self.assertEqual(bm.id, "123")
+        self.assertEqual(bm.created_at, date)
+        self.assertEqual(bm.updated_at, date)
+
+    def test_init_without_kwargs(self):
+        """test initialization with kwargs"""
+        with self.assertRaises(TypeError):
+            BaseModel(id=None, created_at=None, updated_at=None)
+
+    def test_save(self):
+        """effectiveness of timestamps updates"""
+        bm = BaseModel()
+        sleep(0.1)
+        update = bm.updated_at
+        bm.save()
+        self.assertLess(update, bm.updated_at)
+
 
 if __name__ == "__main__":
     unittest.main()
