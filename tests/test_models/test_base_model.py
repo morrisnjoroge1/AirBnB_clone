@@ -39,10 +39,12 @@ class Test_BaseModel(unittest.TestCase):
 
         #check attributes are set correctly
 
-        self.assertEqual(base_model.id, args['id'])
-        self.assertEqual(base_model.created_at, args['created_at'])
-        self.assertEqual(base_model.updated_at, args['updated_at'])
-        self.assertEqual(base_model.name, args['name'])
+        self.assertEqual(base_model.id, '123')
+        self.assertEqual(base_model.created_at,
+                datetime.fromisoformat('2023-01-01T00:00:00'))
+        self.assertEqual(base_model.updated_at,
+                datetime.fromisoformat('2023-01-01T00:00:00'))
+        self.assertEqual(base_model.name, 'Test')
 
 
 if __name__ == "__main__":
