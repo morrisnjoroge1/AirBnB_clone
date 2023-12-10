@@ -88,3 +88,21 @@ all	create [class name] [id]
 <br>
 update	create [class name] [id] [arg_name] [arg_value]
 <br>
+
+
+<u>Available classes</U>
+<br>
+BaseModel  id, created_at, updated_at
+<br>
+User	email, password, first_name, last_name
+<br>
+State	name state_id
+<br>
+City	name
+<br>
+Amenity	name
+<br>
+Place	city_id user_id name description number_rooms number_bathrooms max_guest price_by_night latitude``longitude amenity_ids
+<br>
+Review	place_id user_id text
+<br>
