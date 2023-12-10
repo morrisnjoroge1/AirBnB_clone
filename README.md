@@ -186,4 +186,42 @@ Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
 (hbnb) 
-$```
+$
+```
+<br>
+
+The program will create a file called: file.json whenever you create a new model, it'll be store in the top folder.
+
+
+TESTING
+
+all test are defined in the test folder
+<br>
+Python Unit Tests
+<br>
+unittest module
+<br>
+File extension .py
+<br>
+Files and folders star with test_
+<br>
+Organization:for models/base.py, unit tests in: tests/test_models/test_base.py
+<br>
+Execution command: python3 -m unittest discover tests
+<br>
+or: python3 -m unittest tests/test_models/test_base.py
+<br>
+
+run test in interactive mode
+
+```
+echo "python3 -m unittest discover tests" | bash
+```
+
+run test in non-interactive mode
+
+```
+python3 -m unittest discover tests
+```
+
+
