@@ -30,21 +30,32 @@ class Test_BaseModel(unittest.TestCase):
 
         args ={
                 'id': '123',
-                'created_at': datetime(2023, 10, 15, 12, 0, 0),
-                "updated_at": datetime(2023, 10, 15, 12, 1, 0),
+                'created_at': '2023-12-01T00:00:00',
+                "updated_at": '2023-12-01T00:00:00',
                 "name": "Test",
         }
 
-        base_model = BaseModel(**arg)
+        base_model = BaseModel(**args)
 
         #check attributes are set correctly
 
         self.assertEqual(base_model.id, '123')
         self.assertEqual(base_model.created_at,
-                datetime.fromisoformat('2023-01-01T00:00:00'))
+                datetime.fromisoformat('2023-12-01T00:00:00'))
         self.assertEqual(base_model.updated_at,
-                datetime.fromisoformat('2023-01-01T00:00:00'))
+                datetime.fromisoformat('2023-12-01T00:00:00'))
         self.assertEqual(base_model.name, 'Test')
+
+
+    def test_init_without_arguments(self):
+        """test without arguments"""
+        base_model = BaseModel()
+
+        #check attributes are set correctly
+        self.assertIsNotNone(base_model.id)
+        self.assertIsNotNone(base_model.created_at)
+        self.assertIsNotNone(base_model.updated_at)
+        self.assertEqual(base_model.created_at, base_model.updated_at)
 
 
 if __name__ == "__main__":
