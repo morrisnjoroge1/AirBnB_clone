@@ -8,7 +8,7 @@ Defines unittests for models/base_model.py.
 import unittest
 import models
 import os
-import uuid
+from uuid import uuid4
 from  datetime import datetime
 from models.base_model import BaseModel
 from time import sleep
@@ -29,9 +29,9 @@ class Test_BaseModel(unittest.TestCase):
         """test initialization with argumentas(kwargs)"""
 
         args ={
-                'id': str(uuid.uuid4()),
-                'created_at': datetime(2023, 10, 15, 12, 00, 00),
-                "updated_at": datetime(2023, 10, 15, 12, 01, 00),
+                'id': '123',
+                'created_at': datetime(2023, 10, 15, 12, 0, 0),
+                "updated_at": datetime(2023, 10, 15, 12, 1, 0),
                 "name": "Test",
         }
 
