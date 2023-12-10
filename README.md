@@ -1,4 +1,4 @@
-<b>0x00. AirBnB clone - The console<b>
+<strong>0x00. AirBnB clone - The console<strong>
 
 
 ![image](https://github.com/AnneMbulwa/AirBnB_clone/assets/91100743/8caf3204-f769-433c-9dec-8e09d1551859)
@@ -59,3 +59,17 @@ Do operations on objects (count, compute stats, etc…)
 Update attributes of an object
 <br>
 Destroy an object
+<br>
+
+Available commands
+Command	Explanation
+create	Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id. Ex: $ create BaseModel
+show	Prints the string representation of an instance based on the class name and id. Ex: $ show BaseModel 1234-1234-1234
+all	Prints all string representation of all instances based or not on the class name. Ex: $ all BaseModel
+update	Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file). Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holbertonschool.com"
+Normal command input
+Command	Example
+create	create [class name]
+show	show [class name] [id]
+all	create [class name] [id]
+update	create [class name] [id] [arg_name] [arg_value]
