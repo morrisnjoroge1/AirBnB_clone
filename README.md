@@ -141,12 +141,7 @@ that contains several files:
 		<br>
 
 
-<b>RUN</b>
-
-to execute the console use:
-
-In interactive mode
-
+<strong>RUN</strong>
 
 $ ./console.py
 (hbnb) help
@@ -155,7 +150,7 @@ Documented commands (type help <topic>):
 ========================================
 EOF  help  quit
 
-(hbnb) 
-(hbnb) 
+(hbnb)
+(hbnb)
 (hbnb) quit
 $
