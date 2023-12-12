@@ -154,3 +154,57 @@ class Test_Review(unittest.TestCase):
         with open("file.json", "r") as file:
             self.assertIn(review_id, file.read())
 
+
+    def test_save_functionality(self):
+        """Verifies the functionality of the save() method"""
+        initial_updated_at = self.review.updated_at
+        self.review.save()
+        updated_at_after_save = self.review.updated_at
+        self.assertNotEqual(initial_updated_at, updated_at_after_save)
+
+    def test_to_dict_expected_output(self):
+        """Checks the expected output of the to_dict() method"""
+        expected_dict = {
+            'id': self.review.id,
+            'created_at': self.review.created_at.isoformat(),
+            'updated_at': self.review.updated_at.isoformat(),
+            '__class__': 'Review'
+        }
+        self.assertEqual(self.review.to_dict(), expected_dict)
+
+    def test_to_dict_returns_dictionary(self):
+        """Verifies that the class returns a dictionary in the to_dict() method"""
+        review_instance = Review()
+        self.assertTrue(dict, type(review_instance.to_dict()))
+
+    def test_different_to_dict_for_instances(self):
+        """Checks that the class produces different dictionaries for different instances"""
+        review_instance1 = Review()
+        sleep(0.05)
+        review_instance2 = Review()
+        self.assertNotEqual(review_instance1.to_dict(), review_instance2.to_dict())
+
+    def test_to_dict_has_correct_keys(self):
+        """Checks that the dictionary contains the correct keys in the to_dict() method"""
+        review_instance = Review()
+        self.assertIn("id", review_instance.to_dict())
+        self.assertIn("__class__", review_instance.to_dict())
+        self.assertIn("created_at", review_instance.to_dict())
+        self.assertIn("updated_at", review_instance.to_dict())
+
+
+    def test_to_dict_created_at_iso_format(self):
+        """Verifies ISO formatted string in 'created_at' field of the dictionary"""
+        review_dict = self.review.to_dict()
+        created_at_in_dict = review_dict["created_at"]
+        self.assertEqual(created_at_in_dict, self.review.created_at.isoformat())
+
+    def test_to_dict_updated_at_iso_format(self):
+        """Verifies ISO formatted string in 'updated_at' field of the dictionary"""
+        review_dict = self.review.to_dict()
+        updated_at_in_dict = review_dict["updated_at"]
+        self.assertEqual(updated_at_in_dict, self.review.updated_at.isoformat())
+
+
+if __name__ == "__main__":
+    unittest.main()
