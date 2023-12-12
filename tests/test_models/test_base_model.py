@@ -86,7 +86,7 @@ class Test_BaseModel(unittest.TestCase):
 
 
     def test_generated_ids_are_unique(self):
-         """Verifies that the generated 'id' values are unique."""
+        """Verifies that the generated 'id' values are unique."""
         instance1 = BaseModel()
         instance2 = BaseModel()
         self.assertNotEqual(instance1.id, instance2.id)

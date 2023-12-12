@@ -100,3 +100,57 @@ class Test_Review(unittest.TestCase):
         """Check if the 'created_at' attribute is a datetime object"""
         self.assertEqual(datetime, type(Review().created_at))
 
+    def test_different_timestamps_for_updated_at(self):
+        """Ensures that timestamps are different"""
+        instance1 = Review()
+        sleep(0.05)
+        instance2 = Review()
+        self.assertLess(instance1.updated_at, instance2.updated_at)
+
+    def test_successful_instance_storage_and_retrieval(self):
+        """Verifies successful storage and retrieval of instances"""
+        self.assertIn(Review(), models.storage.all().values())
+
+    def test_string_representation_difference(self):
+        """Checks for differences in string representations"""
+        review_instance1 = Review()
+        review_instance2 = Review()
+        self.assertNotEqual(review_instance1.__str__(), review_instance2.__str__())
+
+
+    def test_string_representation_method(self):
+        """Verifies the correctness of the str() method"""
+        review_str = str(self.review)
+        self.assertIn("[Review]", review_str)
+        self.assertIn("id", review_str)
+        self.assertIn("created_at", review_str)
+        self.assertIn("updated_at", review_str)
+
+    def test_save_effectiveness(self):
+        """Checks the effectiveness of timestamp updates during save"""
+        review_instance = Review()
+        sleep(0.1)
+        initial_update = review_instance.updated_at
+        review_instance.save()
+        self.assertLess(initial_update, review_instance.updated_at)
+
+    def test_two_saves_effectiveness(self):
+        """Checks the effectiveness of different timestamp updates during two saves"""
+        review_instance = Review()
+        sleep(0.1)
+        initial_update = review_instance.updated_at
+        review_instance.save()
+        second_update = review_instance.updated_at
+        self.assertLess(initial_update, second_update)
+        sleep(0.1)
+        review_instance.save()
+        self.assertLess(second_update, review_instance.updated_at)
+
+    def test_save_updates_file_correctly(self):
+        """Verifies that updates are correctly stored and updated in the file"""
+        review_instance = Review()
+        review_instance.save()
+        review_id = "Review." + review_instance.id
+        with open("file.json", "r") as file:
+            self.assertIn(review_id, file.read())
+
