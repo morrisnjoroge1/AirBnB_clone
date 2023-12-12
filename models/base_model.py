@@ -6,8 +6,7 @@ from datetime import datetime
 
 
 class BaseModel:
-    """defines all the common attributes"""
-    
+    """defines all the common attributes""" 
     def __init__(self, *args, **kwargs):
         """
         initiliazes the basemodel class
